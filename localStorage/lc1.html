@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        document.getElementById("name1").innerHTML =
+          "Name of candidate is\n " +
+          localStorage.getItem("name") +
+          ". His mail id is " +
+          localStorage.getItem("email") +
+          " and he is from " +
+          localStorage.getItem("city") +
+          ". His gender is " +
+          localStorage.getItem("gender") +
+          " and he " +
+          localStorage.getItem("passport") +
+          (localStorage.getItem("comments")
+            ? ". The comments mentioned by him are " +
+              localStorage.getItem("comments")
+            : "");
+      };
+    </script>
+    <div
+      style="
+        margin: auto;
+        height: 500px;
+        width: 300px;
+        overflow: auto;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 20px;
+        padding-left: 15px;
+        background-color: lightblue;
+      "
+    >
+      <h1>The details are</h1>
+      <p style="color: black; font-size: x-large; width: 250px" id="name1"></p>
+    </div>
+  </body>
+</html>

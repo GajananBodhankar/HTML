@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Disp() {
+        var table = document.getElementById("table");
+        var row = table.insertRow();
+        document.getElementById("name").value
+          ? (c1 = row.insertCell(0))
+          : alert("Enter value");
+        document.getElementById("name").value ? (c2 = row.insertCell(1)) : null;
+        c1.innerText = document.getElementById("name").value;
+        c2.innerText = document.getElementById("age").value;
+      }
+    </script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      .container {
+        height: 600;
+        width: fit-content;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <input type="text" name="name" id="name" placeholder="Enter name" />
+      <br /><br />
+      <input type="text" name="name" id="age" placeholder="Enter age" />
+      <br /><br />
+      <button onclick="Disp()">Add</button>
+      <br /><br />
+      <table style="width: 200" id="table">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+        <tr style="text-align: center">
+          <td>gajanan</td>
+          <td>21</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

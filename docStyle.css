@@ -1,0 +1,30 @@
+.container {
+  height: 600px;
+  width: 400px;
+  border: 1px solid black;
+  margin: auto;
+  border-radius: 10px;
+  background-color: darkkhaki;
+}
+.name {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.button {
+  top: 50px;
+  font-size: large;
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 170px;
+}
+.input {
+  height: 30px;
+  width: 250px;
+}
+.inputDept {
+  height: 30px;
+  width: 200px;
+}

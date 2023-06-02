@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./docStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="name" id="1">
+        <label for="name" style="font-size: x-large">Name :</label>
+        <input type="text" id="name" class="input" />
+        <br /><br /><br />
+        <label for="Department" style="font-size: x-large">Department :</label>
+        <select id="Department" class="inputDept">
+          <option value="" selected disabled>Select Department</option>
+          <option value="Mobility">Mobility</option>
+          <option value="Human Resources">Human Resources</option>
+          <option value="Digital">Digital</option>
+          <option value="Microsoft">Microsoft</option>
+        </select>
+        <br /><br /><br />
+        <label for="Gender" style="font-size: x-large">Gender :</label>
+        <input type="radio" name="Gender" id="male" />
+        <label style="font-size: x-large">Male</label>
+        <input type="radio" name="Gender" id="female" />
+        <label style="font-size: x-large">Female</label>
+        <br /><br /><br />
+        <label for="checkbox" style="font-size: x-large">Passport</label
+        ><input type="checkbox" id="passport" /> <br /><br />
+        <label style="font-size: x-large">Comments :</label>
+        <br /><br />
+        <textarea
+          id="textarea"
+          cols="30"
+          rows="10"
+          style="resize: none"
+        ></textarea>
+        <br /><br />
+      </div>
+      <button class="button" onclick="Display()">Submit</button>
+    </div>
+    <script>
+      function Display() {
+        alert(
+          `${document.getElementById("name").value}\n${
+            document.getElementById("Department").value
+          }\n${document.getElementById("male").checked == true ? "male" : ""}${
+            document.getElementById("female").checked == true ? "Female" : ""
+          }\n${
+            document.getElementById("passport").checked == true
+              ? "Has a passport"
+              : "Does not have a passport"
+          }\n${document.getElementById("textarea").value}`
+        );
+      }
+    </script>
+  </body>
+</html>
