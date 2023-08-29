@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="mainDiv">
+      <table id="myTable">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td>
+            <button onclick="deleteR(1)">Delete</button>
+          </td>
+        </tr>
+        <tr id="three">
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+          <td>
+            <button onclick='check("three",2)'>Edit</button>
+            <button onclick="deleteR(2)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <button onclick="Insert()">Press</button>
+    <script>
+      function Insert() {
+        var x = document.getElementById("myTable");
+        var r = x.insertRow();
+        let input1 = document.createElement("input");
+        input1.type = "text";
+        input1.style.width = 70;
+        input1.style.height = 50;
+        let input2 = document.createElement("input");
+        input2.type = "text";
+        input2.style.width = 70;
+        input2.style.height = 50;
+        let input3 = document.createElement("input");
+        input3.type = "text";
+        input3.style.width = 70;
+        input3.style.height = 50;
+        let buttonContainer = document.createElement("div");
+        let button1 = document.createElement("button");
+        button1.textContent = "Edit";
+        let button2 = document.createElement("button");
+        button2.textContent = "Delete";
+        buttonContainer.appendChild(button1);
+        buttonContainer.appendChild(button2);
+
+        // Append the container div to the cell
+
+        r.insertCell(0).appendChild(input1);
+        r.insertCell(1).appendChild(input2);
+        r.insertCell(2).appendChild(input3);
+        r.insertCell(3).appendChild(buttonContainer);
+      }
+      function check(x, num) {
+        var i = document.getElementById(x);
+        let arr = document.getElementById(x).innerText.split("	");
+        i.deleteCell(2);
+        i.deleteCell(1);
+        i.deleteCell(0);
+
+        let input1 = document.createElement("input");
+        input1.type = "text";
+        input1.style.width = 70;
+        input1.style.height = 50;
+        input1.value = arr[0];
+        let input2 = document.createElement("input");
+        input2.type = "text";
+        input2.style.width = 70;
+        input2.style.height = 50;
+        input2.value = arr[1];
+        let input3 = document.createElement("input");
+        input3.type = "text";
+        input3.style.width = 70;
+        input3.style.height = 50;
+        input3.value = arr[0];
+        i.insertCell(0).appendChild(input1);
+        i.insertCell(1).appendChild(input2);
+        i.insertCell(2).appendChild(input3);
+      }
+      function deleteR(num) {
+        document.getElementById("myTable").deleteRow(num);
+      }
+    </script>
+  </body>
+</html>

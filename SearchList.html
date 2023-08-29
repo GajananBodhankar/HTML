@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 30%;
+      margin: auto;
+    }
+    .textInput {
+      width: 100%;
+      height: 50px;
+      margin-top: 10px;
+    }
+    .list {
+      margin-top: 5;
+      margin-bottom: 5;
+      border: 1px solid grey;
+      text-align: center;
+      font-size: 22;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <input
+        type="text"
+        class="textInput"
+        placeholder="Search item..."
+        onkeyup="filterName()"
+        id="input"
+      />
+      <ul style="list-style-type: none" id="subContainer">
+        <li class="list">Apple</li>
+        <li class="list">Ana</li>
+        <li class="list">Ball</li>
+        <li class="list">Bridge</li>
+        <li class="list">Cat</li>
+        <li class="list">Car</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    let filter = document.getElementById("input");
+    let contact = document
+      .getElementById("subContainer")
+      .getElementsByTagName("li");
+    filter.addEventListener("input", filterName);
+    function filterName() {
+      let search = filter.value.toUpperCase();
+      for (let i = 0; i < contact.length; i++) {
+        let item = contact[i].textContent.toUpperCase();
+        if (item.startsWith(search)) {
+          contact[i].style.display = "block";
+        } else {
+          contact[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</html>
