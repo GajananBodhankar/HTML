@@ -1,0 +1,17 @@
+body {
+  background-color: #faf2e3;
+}
+.mainContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+.title {
+  text-transform: uppercase;
+  font-size: x-large    ;
+  color: #362921;
+}
