@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+   
+      <h4>Visit the website</h4>
+      <a href="http://www.cupcakeipsum.com/" target="_blank" onmouseover="Check()" onmouseleave="leave()">Link</a>
+<span id="hover"></span>
+
+      <script>
+        function Check(){
+          document.getElementById('hover').innerText="Hovered"
+        }
+        function leave(){
+          document.getElementById('hover').innerText=''
+        }
+      </script>
+  </body>
+</html>
