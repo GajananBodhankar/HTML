@@ -1,0 +1,22 @@
+h1 {
+    color: #4b0082;
+  }
+  .firstItem {
+    background-color: #008b8b;
+    width: 256px;
+    color: beige;
+    padding: 10px;
+  }
+  
+  .secondItem{
+    background-color: cornsilk;
+    color:darkslategray;
+    width: 256px;
+    padding: 10px;
+  }
+  .thirdItem{
+    width: 256px;
+    padding: 10px;
+    background-color: dodgerblue;
+    color:lightcyan 
+  }
