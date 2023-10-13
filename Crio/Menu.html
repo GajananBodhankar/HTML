@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu buttons</title>
+    <style>
+      .menu {
+        margin-bottom: 25px;
+        width: fit-content;
+      }
+      .menu:hover {
+        cursor: pointer;
+        .dot {
+          background-color: rgba(68, 240, 76, 0.4);
+        }
+        .square {
+          background-color: rgba(68, 240, 76, 0.4);
+        }
+        .rect {
+          background-color: rgba(68, 240, 76, 0.4);
+        }
+      }
+      .dot {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 150px;
+        background-color: black;
+        margin-bottom: 4px;
+      }
+
+      .square {
+        height: 1rem;
+        width: 1rem;
+        background-color: black;
+        margin-bottom: 4px;
+      }
+      .rect {
+        height: 0.5rem;
+        width: 2.5rem;
+        background-color: #424242;
+        margin-bottom: 4px;
+      }
+      div:last-child {
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="dot"><br /></div>
+      <div class="dot"><br /></div>
+      <div class="dot"><br /></div>
+    </div>
+    <div class="menu">
+      <div class="square"><br /></div>
+      <div class="square"><br /></div>
+      <div class="square"><br /></div>
+    </div>
+    <div class="menu">
+      <div class="rect"><br /></div>
+      <div class="rect"><br /></div>
+      <div class="rect"><br /></div>
+    </div>
+  </body>
+</html>
