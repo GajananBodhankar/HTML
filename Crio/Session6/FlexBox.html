@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FLex Box</title>
+    <style>
+      .container {
+        display: flex;
+        height: 100vh;
+        /* width: 100vw; */
+        justify-content: center;
+        border: 1px solid black;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .box {
+        height: 100px;
+        width: 180px;
+      }
+      .child1 {
+        background-color: red;
+      }
+      .child2 {
+        background-color: blue;
+      }
+      .child3 {
+        background-color: pink;
+      }
+      .child4 {
+        background-color: greenyellow;
+      }
+      .child5 {
+        background-color: yellow;
+      }
+      .child6 {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <nav style="display: flex; justify-content: space-between">
+      <h1>Post</h1>
+      <ul style="display: flex; list-style: none; background-color: red">
+        <li>Home</li>
+        <li>About</li>
+        <li>Edit</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="child1 box">One</div>
+      <div class="child2 box">Two</div>
+      <div class="child3 box">Three</div>
+      <div class="child4 box">Four</div>
+      <div class="child5 box">FIve</div>
+      <div class="child6 box">SIx</div>
+      <div class="child1 box">One</div>
+      <div class="child2 box">Two</div>
+      <div class="child3 box">Three</div>
+      <div class="child4 box">Four</div>
+      <div class="child5 box">FIve</div>
+      <div class="child6 box">SIx</div>
+    </div>
+  </body>
+</html>
