@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        padding: 0.5rem;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-around;
+        text-align: justify;
+        /* gap: 10px; */
+      }
+      /* * {
+        margin: 1px;
+        padding: 1px;
+      } */
+      li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      style="
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        font-family: sans-serif;
+        color: white;
+        padding: 0 5px 0 5px;
+      "
+    >
+      <h1>Post</h1>
+      <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Edit</li>
+      </ul>
+    </nav>
+  </body>
+</html>
