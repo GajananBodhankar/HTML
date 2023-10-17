@@ -8,7 +8,14 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <style>
+      .spanText {
+        opacity: 90%;
+        font-size: 14.4px;
+      }
+    </style>
   </head>
+
   <body>
     <div class="container d-flex justify-content-center">
       <div class="row">
@@ -37,10 +44,14 @@
 
               <div class="card-text">
                 <p style="opacity: 60%; font-size: 14.4px">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Soluta dolorem temporibus, ipsum quae cum ut suscipit? Culpa
-                  quisquam nulla, cupiditate, fugit aliquid magnam eveniet saepe
-                  quam quos nesciunt tempora delectus.
+                  Lorem ipsum dolor sit
+                  <span class="spanText" id="textButton" style="display: none">
+                    amet consectetur adipisicing elit. Itaque, aliquid rerum
+                    numquam, asperiores sapiente modi, repellendus molestias
+                    nulla ipsam eligendi accusamus dolorum omnis libero sed. Id
+                    dolores libero commodi ab!
+                  </span>
+                  <a href="#" onclick="Disp()" id="mybtn">read more</a>
                 </p>
               </div>
             </div>
@@ -50,7 +61,12 @@
             >
               <span
                 >By
-                <a href="https://www.github.com/GajananBodhankar" target="_blank" class="text-decoration-underline">Author</a>
+                <a
+                  href="https://www.github.com/GajananBodhankar"
+                  target="_blank"
+                  class="text-decoration-underline"
+                  >Author</a
+                >
               </span>
 
               <span>Read Time</span>
@@ -59,6 +75,18 @@
         </div>
       </div>
     </div>
+    <script>
+      function Disp() {
+        let x = document.getElementById("textButton");
+        if (x.style.display == "none") {
+          x.style.display = "block";
+          document.getElementById("mybtn").innerText = "read less";
+        } else {
+          x.style.display = "none";
+          document.getElementById("mybtn").innerText = "read more";
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
