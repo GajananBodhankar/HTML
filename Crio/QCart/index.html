@@ -17,6 +17,9 @@
       .under {
         margin-right: 2rem;
       }
+      p {
+        margin: 0;
+      }
     </style>
   </head>
   <body>
@@ -50,24 +53,213 @@
         background-image: url('./city.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         padding-top: 9rem;
         padding-bottom: 9rem;
       "
     >
       <p style="font-size: xx-large; margin-bottom: 0">Welcome to QTrip</p>
-      <p style="font-size: large">
+      <p style=" text-align: center; margin-bottom: 1rem">
         Explore the world with fantastic places to venture around
       </p>
       <div class="input-group" style="width: 40%">
         <input
           type="text"
-          name=""
-          id=""
-          class="form-control"
+          name="SearchBar"
           placeholder="Search a city"
+          class="form-control"
+          onkeyup="check()"
+          id="textInput"
         />
       </div>
     </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://im.whatshot.in/img/2020/Apr/vertical-1586206890.jpg');
+                background-size: cover;
+                background-position: center;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                text-align: center;
+              "
+            >
+              BANGALORE
+              <p style="margin-bottom: 1rem">180+ PLACES</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/victoria-memorial-kolkata-west-bengal-india-henning-marquardt.jpg');
+                background-size: cover;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                background-position: center;
+                text-align: center;
+              "
+            >
+              KOLKATA
+              <p style="margin-bottom: 1rem">180+ PLACES</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://t4.ftcdn.net/jpg/03/62/54/67/360_F_362546707_5p8VrfGOdalokB3gjrTIEAKBrAJb89E3.jpg');
+                background-size: cover;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                background-position: center;
+                text-align: center;
+              "
+            >
+              GOA
+              <p style="margin-bottom: 1rem">180+ PLACES</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1611641613359-f698d54566dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eSUyMGJ1aWxkaW5nfGVufDB8fDB8fHww&w=1000&q=80');
+                background-size: cover;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                background-position: center;
+                text-align: center;
+              "
+            >
+              MUMBAI
+              <p style="margin-bottom: 1rem">121+ PLACES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://media.istockphoto.com/id/1044781846/photo/dal-lake-in-srinagar-kashmir.jpg?s=612x612&w=0&k=20&c=OMfOMZpZBi4Tg-esjcXA4uOYjmKiXxqJbMr-mObhxtY=');
+                background-size: cover;
+                background-position: center;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                text-align: center;
+              "
+            >
+              SRINAGAR
+              <p style="margin-bottom: 1rem">180+ PLACES</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://c0.wallpaperflare.com/preview/812/855/588/india-ahmedabad-river-front-road.jpg');
+                background-size: cover;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                background-position: center;
+                text-align: center;
+              "
+            >
+              AHMEDABAD
+              <p style="margin-bottom: 1rem">180+ PLACES</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/hawa-mahal-jaipur-rajahstan-india-rod-.jpg');
+                background-size: cover;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                background-position: center;
+                text-align: center;
+              "
+            >
+              JAIPUR
+              <p style="margin-bottom: 1rem">180+ PLACES</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-xl-2">
+          <div class="card my-2">
+            <div
+              class="card-img-top"
+              style="
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDDP0rxylOSD97NF0fY0Az9uHyjlDaX3eeyA&usqp=CAU');
+                background-size: cover;
+                padding-top: 10rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                color: white;
+                background-position: center;
+                text-align: center;
+              "
+            >
+              HYDERABAD
+              <p style="margin-bottom: 1rem">121+ PLACES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>hello</section>
+    <section>hi</section>
+    <script>
+      function check() {
+        let x = document.getElementById("textInput").value;
+        let item = document.getElementsByClassName(
+          "col-lg-2 col-md-4 col-xl-2"
+        );
+        for (let i = 0; i < item.length; i++) {
+          let Search = item[i].innerText.split(/\n\s/)[0];
+          if (
+            Search.includes(x.toUpperCase()) ||
+            Search.startsWith(x.toUpperCase())
+          ) {
+            item[i].style.display = "block";
+          } else {
+            item[i].style.display = "none";
+          }
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
