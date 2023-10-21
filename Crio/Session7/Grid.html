@@ -10,12 +10,12 @@
         width: 100vw;
         height: 100vh;
         display: grid;
-
         grid-template-rows: repeat(4, 25%);
         grid-template-columns: repeat(3, 33.33%);
       }
       .item1 {
         background-color: red;
+        /* Even height and width is not specified, it takes the entire because div is a block element */
         height: 100%;
         width: 100%;
         display: flex;
@@ -29,6 +29,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
       }
     </style>
   </head>
@@ -38,6 +39,6 @@
       <div class="item2">two</div>
       <div class="item1">one</div>
       <div class="item2">two</div>
-    </div>
+    `</div>
   </body>
 </html>
