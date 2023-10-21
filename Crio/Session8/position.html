@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POSITION</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        height: 100vw;
+      }
+      .container {
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        height: 50vh;
+        width: 50vw;
+        border: 1px solid black;
+      }
+      .box1 {
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        position: absolute;
+        top: 20px;
+      }
+      .box2 {
+        height: 50px;
+        width: 50px;
+        background-color: yellow;
+        left: 10px;
+        top: 0;
+        position: fixed;
+      }
+      .box3 {
+        height: 50px;
+        width: 50px;
+        background-color: orange;
+      }
+      .box4 {
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+        position: sticky;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        style="
+          position: relative;
+          margin-top: 10px;
+          border: 1px solid black;  
+          height: 60px;
+          width: 60px;
+        "
+      >
+        <!-- here Box1 has position:absolute but
+         it did take w.r.t the screen top:10px, 
+         but it takes w.r.t. nearest parent with 
+         position:absolute/relative which is the above one -->
+        <div class="box1">1</div>
+      </div>
+      <div class="box2">2</div>
+      <div class="box4">4</div>
+      <div class="box3">3</div>
+    </div>
+  </body>
+</html>
