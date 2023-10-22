@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sidebar</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .sidebar {
+        border-top: 1px solid #dadada;
+        width: 10rem;
+        height: 80vh;
+        margin: 1rem;
+        border-right: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+        border-radius: 10px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      #sb-heading {
+        color: blueviolet;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-bottom: 4px;
+        letter-spacing: 2px;
+      }
+      .sb-item {
+        margin-bottom: 4px;
+        padding: 0.5rem;
+      }
+      .sb-item:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar" style="display: inline-block;">
+      <h3 id="sb-heading">Workspace</h3>
+      <div class="sb-item">Home</div>
+      <div class="sb-item">Dashboard</div>
+      <div class="sb-item">Analytics</div>
+      <div class="sb-item">Profile</div>
+    </aside>
+    <script></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
