@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .subContainer {
+        border: 0.1px solid grey;
+        padding: 0.3em;
+        box-shadow: 0.03em 0.03em 5px 0px black;
+        border-radius: 0.4em;
+        display: flex;
+        flex-direction: column;
+        max-width: 17em;
+      }
+      img {
+        height: 15rem;
+        border-radius: 0.7em;
+      }
+      .spa {
+        border: 0.5px solid grey;
+        padding: 0.1em 0.7em;
+        border-radius: 1em;
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-top: 0.4em;
+      }
+      span:nth-child(2) {
+        margin-left: 0em;
+      }
+      h3 {
+      }
+      p {
+        padding: 0 1.2em;
+        opacity: 60%;
+      }
+
+      #btn {
+        width: 10em;
+        border-radius: 1em;
+        border: 0.5px solid white;
+        align-self: center;
+        padding: 0.3em 1em;
+        background-color: rgb(202, 242, 255);
+        color: rgb(0, 145, 255);
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="subContainer">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+          alt="Image not found"
+        />
+        <div style="display: flex">
+          <span class="spa">Native</span>
+          <span class="spa">Lake</span>
+        </div>
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi dolor
+          enim iste.<span id="extra" style="display: none">
+            Expedita aliquid est omnis dolorum, aspernatur, inventore quaerat
+            accusamus eligendi voluptatibus aut beatae quo. Hic cumque ea sequi.
+          </span>
+        </p>
+        <button id="btn" onclick="show()">Read more</button>
+      </div>
+    </div>
+    <script>
+      function show() {
+        let element = document.getElementById("extra").style.display;
+        
+        console.log(element);
+        if (element == "none") {
+          document.getElementById("extra").style.display = "inline";
+          document.getElementById("btn").innerText = "Read Less";
+        } else {
+          document.getElementById("extra").style.display = "none";
+          document.getElementById("btn").innerText = "Read More";
+        }
+      }
+    </script>
+  </body>
+</html>
