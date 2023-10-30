@@ -25,7 +25,7 @@
         max-width: 17em;
       }
       img {
-        height: 15rem;
+        height: 13rem;
         border-radius: 0.7em;
       }
       .spa {
@@ -57,6 +57,9 @@
         color: rgb(0, 145, 255);
         margin-top: 1em;
       }
+      #btn:hover {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -84,8 +87,6 @@
     <script>
       function show() {
         let element = document.getElementById("extra").style.display;
-        
-        console.log(element);
         if (element == "none") {
           document.getElementById("extra").style.display = "inline";
           document.getElementById("btn").innerText = "Read Less";
