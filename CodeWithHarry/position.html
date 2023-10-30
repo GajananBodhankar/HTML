@@ -3,16 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Position</title>
     <style>
+      /* If the parent container has perspective, filter or transform also 
+      then the absolute child works w.r.t to the parent container */
       .container {
-        background-color: grey;
-        height: 50vh;
-        width: 50vw;
+        /* filter: brightness(95%); */
+        /* transform: translate(50%, 0); */
+        perspective: 0em;
+        top: 5em;
+        height: 40vh;
+        width: 40vh;
+        margin-top: 50px;
+        border: 1px solid black;
+      }
+      .one {
+        border: 1px solid red;
+        position: absolute;
+        top: 20px;
       }
     </style>
   </head>
   <body>
-    <span class="container">My name is john cena</span>
+    <div class="container">
+      <div class="one">one</div>
+    </div>
   </body>
 </html>
