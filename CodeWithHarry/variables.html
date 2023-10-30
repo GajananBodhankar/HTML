@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --color: rgb(131, 247, 224);
+        --defaultpadding: 1em;
+        --defborder: 1px solid black;
+      }
+      nav {
+        background-color: var(--color);
+      }
+      ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      ul li {
+        list-style: none;
+        padding: 0 var(--defaultpadding);
+        border: var(--defborder);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </body>
+</html>
