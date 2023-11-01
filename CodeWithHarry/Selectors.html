@@ -13,6 +13,25 @@
       [color-primary="red"] {
         background-color: aqua;
       }
+
+      .box:nth-child(3) {
+        margin-top: 1em;
+      }
+
+      /* ::before is used to make changes before the boxes class */
+      .boxes::before {
+        content: "I am content before";
+      }
+
+      /* ::after is used to make changes after the boxes class  */
+      .boxes::after {
+        content: "I am content after";
+      }
+
+      .box:nth-child(2)::first-letter {
+        font-size: 3em;
+        color: orange;
+      }
     </style>
   </head>
   <body>
