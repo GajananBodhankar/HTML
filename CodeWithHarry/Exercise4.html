@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      nav > div {
+        display: flex;
+        align-items: center;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(1, 1, 72);
+        color: white;
+        padding: 1em 2em;
+        position: sticky;
+        top: 1px;
+      }
+      div > h2 {
+        padding-left: 1rem;
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+      li {
+        padding: 0 1em;
+        font-size: large;
+      }
+      li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img src="./Exercise3.png" height="40rem" alt="Image not found" />
+        <h2>ASTON MARTIN</h2>
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>Explore</li>
+      </ul>
+    </nav>
+  </body>
 </html>
