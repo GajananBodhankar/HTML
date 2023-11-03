@@ -18,7 +18,6 @@
         padding: 1em 2em;
         position: sticky;
         top: 0px;
-        box-sizing: border-box;
       }
       div > h2 {
         padding-left: 1rem;
@@ -96,16 +95,42 @@
       }
       img {
         border-radius: 0.5em;
+        max-width: 99.5%;
       }
       .aboutText {
         padding: 0 5em;
         font-size: large;
         font-family: monospace;
       }
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 579px) {
         ul {
-          display:none;
+          display: none;
         }
+      }
+
+      @media screen and (max-width: 465px) {
+        .cardOne {
+          width: 20rem;
+        }
+        .cardTwo {
+          width: 20rem;
+        }
+      }
+      .text {
+        padding: 1em 3rem;
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .text::first-letter {
+        font-weight: 400;
+        font-size: 3em;
+        color: rgb(1, 1, 72);
+      }
+      footer {
+        background-color: rgb(1, 1, 72);
+        color: white;
+        padding: 1em;
+        text-align: center;
       }
     </style>
   </head>
@@ -158,6 +183,45 @@
           electric motor for a power boost. Any faster and it would fly.
         </p>
       </div>
+    </div>
+    <div class="text">
+      Aston Martin’s vision is to be the world’s most desirable, ultra-luxury
+      British brand, creating the most exquisitely addictive performance cars.
+      Founded in 1913 by Lionel Martin and Robert Bamford, Aston Martin is
+      acknowledged as an iconic global brand synonymous with style, luxury,
+      performance, and exclusivity. Aston Martin fuses the latest technology,
+      time honoured craftsmanship and beautiful styling to produce a range of
+      critically acclaimed luxury models including the Vantage, DB11, DBS and
+      DBX and its first hypercar, the Aston Martin Valkyrie. Based in Gaydon,
+      England, Aston Martin Lagonda designs, creates and exports cars which are
+      sold in 55 countries around the world. Its sports cars are manufactured in
+      Gaydon with its luxury DBX SUV range proudly manufactured in St Athan,
+      Wales. Lagonda was founded in 1899 and Aston Martin in 1913. The two
+      brands came together in 1947 when both were purchased by the late Sir
+      David Brown, and the company is now listed on the London Stock Exchange as
+      Aston Martin Lagonda Global Holdings plc. 2020 saw Lawrence Stroll become
+      the company’s Executive Chairman, alongside significant new investment, a
+      move that led to Aston Martin’s return to the pinnacle of motorsport with
+      the Aston Martin Cognizant Formula One™ Team and commenced new era for the
+      iconic British marque.
+    </div>
+    <footer>©️All rights reserved</footer>
+    <div
+      style="
+        position: fixed;
+        bottom: 2em;
+        right: 1em;
+        height: 4em;
+        width: 4em;
+        border-radius: 150px;
+        border: 1px solid grey;
+        background-color: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <img src="./phone-call.png" height="40rem" alt="" />
     </div>
   </body>
 </html>
