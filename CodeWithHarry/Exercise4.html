@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Document</title>
     <style>
       nav > div {
@@ -16,7 +17,8 @@
         color: white;
         padding: 1em 2em;
         position: sticky;
-        top: 1px;
+        top: 0px;
+        box-sizing: border-box;
       }
       div > h2 {
         padding-left: 1rem;
@@ -38,6 +40,73 @@
         cursor: pointer;
         text-decoration: underline;
       }
+      .card {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 2rem 0em;
+      }
+      @media screen and (max-width: 800px) {
+        .card {
+          flex-direction: column;
+          align-items: center;
+        }
+        .cardTwo {
+          margin: 1em;
+        }
+        .cardOne {
+          margin: 1em;
+        }
+      }
+      .cardOne {
+        padding: 0.2em;
+        border: 1px solid grey;
+        border-radius: 0.4em;
+        width: 22.2rem;
+        overflow: hidden;
+      }
+      .cardOne:hover {
+        box-shadow: 0px 0px 7px 0px;
+      }
+      .cardTwo > img:hover {
+        filter: brightness(50%);
+        cursor: pointer;
+      }
+      .cardTwo:hover {
+        box-shadow: 0px 0px 7px 0px;
+      }
+      a > img:hover {
+        filter: brightness(50%);
+        cursor: pointer;
+      }
+      .cardOne > h3,
+      .cardOne > p {
+        padding: 0.5em 0.5em;
+      }
+
+      .cardTwo {
+        padding: 0.2rem;
+        border: 1px solid grey;
+        border-radius: 0.4em;
+        width: 22.2rem;
+        overflow: hidden;
+      }
+      .cardTwo > h3,
+      .cardTwo > p {
+        padding: 0.5em 0.5em;
+      }
+      img {
+        border-radius: 0.5em;
+      }
+      .aboutText {
+        padding: 0 5em;
+        font-size: large;
+        font-family: monospace;
+      }
+      @media screen and (max-width: 450px) {
+        ul {
+          display:none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -52,5 +121,43 @@
         <li>Explore</li>
       </ul>
     </nav>
+    <div class="card">
+      <div class="cardOne">
+        <a
+          href="https://www.popsci.com/technology/aston-martin-db12-drive/"
+          target="_blank"
+        >
+          <img
+            src="https://www.popsci.com/uploads/2023/07/05/Aston_Martin_DB12_Green_0025.jpg?auto=webp"
+            alt=""
+            height="200rem"
+        /></a>
+
+        <h3>DB12</h3>
+        <p>
+          DB12. Redefining and reinventing what it means to be a tourer. An icon
+          risen from 73 years of category defining marvels. Cutting through
+          continents, bruising benchmarks and taming tradition.
+        </p>
+      </div>
+      <div class="cardTwo">
+        <a
+          href="https://www.gq-magazine.co.uk/lifestyle/article/aston-martin-valkyrie-test-drive-2023"
+          target="_blank"
+        >
+          <img
+            src="https://media.gq-magazine.co.uk/photos/6405fb643e977a7efb8a7764/master/pass/Aston-Martin-Valkyrie-HED.jpg"
+            alt="Image not found"
+            height="200rem"
+        /></a>
+        <h3>Valkyrie</h3>
+        <p>
+          Valkyrie's otherworldly performance comes from the 6.5-litre V12
+          engine developed with Cosworth. Not what you’d call a traditional
+          hybrid, this V12 is torque-enhanced during take-off and uses the
+          electric motor for a power boost. Any faster and it would fly.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
