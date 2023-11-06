@@ -16,29 +16,43 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(3, 33.33%);
       }
+      /* For center the items, grid only has items */
+      /* align-items: center;
+          justify-items: center;
+          } */
       .item {
         border: 3px solid black;
-        height: 3em;
-        text-align: center;
+        height: 5em;
+        width: 5em;
       }
-      .item-3 {
-        /* This is a shorthand property */
+      /* To overlap item-1 and item-2*/
+      .item-1 {
         grid-row: 1/2;
         grid-column: 1/2;
+      }
+      .item-2 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
+
+      .item-3 {
+        /* This is a shorthand property */
+        /* grid-row: 1/2;
+          grid-column: 1/2; */
         /* This is longhand */
-        /* grid-row-start: 1; */
-        /* grid-column-start: 1; */
+        /* grid-row-start: 1;
+        grid-column-start: 1; */
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="item">1</div>
-      <div class="item">2</div>
+      <div class="item item-1">1</div>
+      <div class="item item-2">2</div>
       <div class="item item-3">3</div>
-      <div class="item">4</div>
-      <div class="item">5</div>
-      <div class="item">6</div>
+      <div class="item item-4">4</div>
+      <div class="item item-5">5</div>
+      <div class="item item-6">6</div>
     </div>
   </body>
 </html>
