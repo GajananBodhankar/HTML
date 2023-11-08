@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      let container = document.getElementById("container");
+      // Create table
+      let table = document.createElement("table");
+      table.setAttribute("border", "solid");
+      table.setAttribute("width", "400px");
+      // Create thead and tbody
+      let thead = document.createElement("thead");
+      thead.innerHTML = "<tr><td>ID</td><td>Name</td></tr>";
+      let tbody = document.createElement("tbody");
+      tbody.innerHTML = "<tr><td>1</td><td>John</td></tr>";
+      //   Append to table
+      table.appendChild(thead);
+      table.appendChild(tbody);
+
+      //   Append table to container
+      container.appendChild(table);
+    </script>
+  </body>
+</html>
