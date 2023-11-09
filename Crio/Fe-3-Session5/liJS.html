@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <input type="text" name="" id="text" />
+    <button>Click</button>
+    <script>
+      let x = document.querySelector("button");
+      let input = document.querySelector("input");
+      var count = 0;
+      input.addEventListener("input", function (event) {
+        count = +event.target.value;
+      });
+      x.addEventListener("click", function () {
+        let prev = document.getElementById("list");
+        let itemCount = prev.innerText.split(/\s/).length;
+
+        for (let i = itemCount ; i <= count; i++) {
+          let element = document.createElement("li");
+          element.textContent = i;
+          prev.appendChild(element);
+        }
+      });
+    </script>
+  </body>
+</html>
