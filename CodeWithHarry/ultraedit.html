@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .image > img {
+        height: 5rem;
+        width: 12rem;
+        overflow: hidden;
+      }
+      img {
+        object-fit: contain;
+        object-position: center;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+      }
+      ul > li {
+        padding: 0 1em;
+        align-self: center;
+      }
+      li > img {
+        height: 1em;
+        vertical-align: middle;
+      }
+      li:hover {
+        cursor: pointer;
+        color: gray;
+      }
+      li {
+        letter-spacing: 0.05em;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="image">
+        <img
+          src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png"
+          alt=""
+        />
+      </div>
+      <ul>
+        <li>Products <img src="./down-arrow.png" alt="" /></li>
+        <li>Pricing <img src="./down-arrow.png" alt="" /></li>
+        <li>About us <img src="./down-arrow.png" alt="" /></li>
+      </ul>
+    </nav>
+  </body>
+</html>
