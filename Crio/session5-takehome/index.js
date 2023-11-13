@@ -24,7 +24,6 @@ const team = [
 ];
 
 //Modify Code below this line
-
 //Content Selected using ID.
 const content = document.getElementById("content");
 
