@@ -104,4 +104,3 @@ for (let card of cardsArray) {
   content.append(card);
   console.log(content);
 }
-//Modify Code above this line
