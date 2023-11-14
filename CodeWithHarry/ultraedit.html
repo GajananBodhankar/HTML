@@ -40,10 +40,33 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       .mainDiv {
-        padding: 0 15rem;
+        display: flex;
+        justify-content:center;
+        
       }
-      .container{
+      .container {
         display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: repeat(3, 33.33%);
+      }
+      .items {
+        margin: 0 1em;
+        padding: 1em 1em;
+        background-color: rgb(248, 248, 248);
+      }
+      .items > img {
+        margin-right: 0.3em;
+      }
+      button {
+        width: 100%;
+        background-color: #00b6d1;
+        font-size: medium;
+        font-weight: bold;
+        padding: 0.7em;
+        border-radius: 0.4em;
+        color: white;
+        border: none;
+        margin-top: 1em;
       }
     </style>
   </head>
@@ -63,7 +86,33 @@
     </nav>
     <div class="mainDiv">
       <div class="container">
-
+        <div class="items">
+          <img src="./windows.png" alt="" width="25rem" />
+          <span
+            style="font-size: x-large; vertical-align: top; font-weight: bold"
+            >Ultra</span
+          ><span style="vertical-align: top; font-size: x-large">Edit</span>
+          <span style="position: relative; bottom: 0.2em">for win</span>
+          <button>Download</button>
+        </div>
+        <div class="items">
+          <img src="./windows.png" alt="" width="25rem" />
+          <span
+            style="font-size: x-large; vertical-align: top; font-weight: bold"
+            >Ultra</span
+          ><span style="vertical-align: top; font-size: x-large">Edit</span>
+          <span style="position: relative; bottom: 0.2em">for win</span>
+          <button>Download</button>
+        </div>
+        <div class="items">
+          <img src="./windows.png" alt="" width="25rem" />
+          <span
+            style="font-size: x-large; vertical-align: top; font-weight: bold"
+            >Ultra</span
+          ><span style="vertical-align: top; font-size: x-large">Edit</span>
+          <span style="position: relative; bottom: 0.2em">for win</span>
+          <button>Download</button>
+        </div>
       </div>
     </div>
   </body>
