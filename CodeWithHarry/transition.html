@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 90vh;
+        width: 99vw;
+
+        /* transition-property: background-color;
+        transition-duration: 3000ms;
+        transition-timing-function: ease-in-out;
+        transition-delay: 1000ms; */
+        
+        transition: background-color 2000ms ease-in-out 1000ms;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="one">
+      <button style="height: 10vh">Press</button>
+    </div>
+    <script>
+      let x = document.querySelector("button");
+      x.addEventListener("click", function () {
+        let i = document.getElementById("one");
+        i.style.backgroundColor = "red";
+      });
+    </script>
+  </body>
+</html>
