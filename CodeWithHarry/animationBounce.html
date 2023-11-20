@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 70vh;
+        width: 60vw;
+        background-color: blue;
+        position: relative;
+      }
+      .item {
+        height: 7rem;
+        width: 7rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: red;
+        border-radius: 150px;
+        animation: xanimation 3s linear infinite,
+          yanimation 1s ease-out 0.7s infinite alternate;
+      }
+      @keyframes xanimation {
+        from {
+          left: 0;
+        }
+        to {
+          left: 85%;
+        }
+      }
+
+      @keyframes yanimation {
+        from {
+          bottom: 0rem;
+        }
+        to {
+          bottom: 75%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
