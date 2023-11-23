@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent {
+        height: 50vh;
+        width: 50vw;
+        margin: auto;
+        border: 1px solid black;
+      }
+      #red {
+        height: 3rem;
+        width: 3rem;
+        border: 1px solid black;
+        margin: 1em;
+        background-color: red;
+      }
+      #blue {
+        height: 3rem;
+        width: 3rem;
+        border: 1px solid black;
+        margin: 1em;
+        background-color: blue;
+      }
+      #ans {
+        height: 3rem;
+        width: 3rem;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="red">1</div>
+      <div id="blue">2</div>
+    </div>
+    <div id="ans"></div>
+  </body>
+  <script>
+    let x = document.querySelector("#parent");
+    x.addEventListener("click", function (e) {
+      let i = document.getElementById("ans");
+      let value = document.getElementById(e.target.id).id;
+      i.style.background = value;
+      console.log(document.getElementById(e.target.id).textContent);
+    });
+  </script>
+</html>
