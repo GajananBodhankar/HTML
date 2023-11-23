@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 50vh;
+        width: 50vw;
+        border: 1px solid black;
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 id="count">0</h2>
+      <div>
+        <button id="inc">Increment</button>
+        <button id="dec">Decrement</button>
+      </div>
+    </div>
+    <script>
+      let count = document.querySelector("#count");
+      let inc = document.querySelector("#inc");
+      let dec = document.querySelector("#dec");
+      inc.addEventListener("click", function (event) {
+        let c = +count.textContent;
+        count.textContent = ++c;
+      });
+      dec.addEventListener("click", function (e) {
+        let c = +count.textContent;
+        count.textContent = +--c;
+      });
+      document.addEventListener("DOMContentLoaded", function (e) {
+        alert("loaded");
+      });
+    </script>
+  </body>
+</html>

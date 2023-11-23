@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="parent">
+        <div id="child1">child1</div>
+        <button id="child2">child2</button>
+      </div>
+    </div>
+    <script>
+      document.querySelector("#parent").addEventListener("click", function (a) {
+        alert(a.target.id);
+      });
+      document
+        .querySelector("#container")
+        .addEventListener("click", function (a) {
+          alert(a.target.id);
+        });
+      document.querySelector("#child2").addEventListener("click", function (a) {
+        alert(a.target.id);
+      });
+    </script>
+  </body>
+</html>
