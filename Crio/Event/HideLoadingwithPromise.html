@@ -25,7 +25,7 @@
         let x = new Promise(function (resolve, reject) {
           setTimeout(function () {
             document.querySelector(".container").innerHTML = "Successful";
-            console.log("done");
+            console.log("done");  
           }, 3000);
         });
         await x;
