@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container d-flex flex-column">
+      <h3>Book a Session</h3>
+      <p>Fill in the form below to book a virtual session with your doctor</p>
+      <h3>Basic Info</h3>
+      <form action="" id="form">
+        <label for="Full Name" class="form-label">Full Name</label>
+        <textarea
+          name="Full Name"
+          id="fname"
+          class="form-control w-50"
+          rows="1"
+          style="resize: none"
+        ></textarea>
+        <label for="Email" class="form-label my-3">Email</label>
+        <textarea
+          name="Email"
+          id="email"
+          class="form-control w-50"
+          rows="1"
+          style="resize: none"
+        ></textarea>
+        <h5 class="my-3">Doctor</h5>
+        <select name="doctor" id="doctor  " class="form-select w-50">
+          <option value="" selected disabled>Select your Doctor</option>
+          <option value="JOHN_HOPKINS">Dr. John Hopkins</option>
+          <option value="MAYA_MARIN">Dr. Maya Marin</option>
+          <option value="DONNA_DOUGLAS">Dr. Donna Douglas</option>
+        </select>
+        <h5 class="my-3">Where?</h5>
+        <div class="form-check">
+          <input
+            type="radio"
+            value="GOOGLE_MEET"
+            name="location"
+            id="Google Meet"
+          />
+          <label for="Google Meet" class="form-label">Google Meet</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" value="PHONE" name="location" id="Phone" />
+          <label for="Phone" class="form-label">Phone</label>
+        </div>
+        <h5 class="my-3">When?</h5>
+        <input type="datetime-local" class="w-50" name="" id="" />
+        <div class="w-40 my-3">
+          <button class="btn btn-primary" >Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+        let x=document.getElementById('form')
+        x.addEventListener('submit',(e)=>{
+            e.preventDefault()
+            send()
+        })
+        function send(){
+            let name=document.getElementById('form')
+            // let email=document.getElementById('email').value
+            console.dir(name)
+            console.log(name.elements['Email'].value)
+
+        }
+
+    </script>
+  </body>
+</html>
