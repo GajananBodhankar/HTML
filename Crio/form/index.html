@@ -61,24 +61,22 @@
         <h5 class="my-3">When?</h5>
         <input type="datetime-local" class="w-50" name="" id="" />
         <div class="w-40 my-3">
-          <button class="btn btn-primary" >Submit</button>
+          <button class="btn btn-primary">Submit</button>
         </div>
       </form>
     </div>
     <script>
-        let x=document.getElementById('form')
-        x.addEventListener('submit',(e)=>{
-            e.preventDefault()
-            send()
-        })
-        function send(){
-            let name=document.getElementById('form')
-            // let email=document.getElementById('email').value
-            console.dir(name)
-            console.log(name.elements['Email'].value)
-
-        }
-
+      let x = document.getElementById("form");
+      x.addEventListener("submit", (e) => {
+        e.preventDefault();
+        send();
+      });
+      function send() {
+        let name = document.getElementById("form");
+        // let email=document.getElementById('email').value
+        console.dir(name);
+        console.log(name.elements["Email"].value);
+      }
     </script>
   </body>
 </html>
