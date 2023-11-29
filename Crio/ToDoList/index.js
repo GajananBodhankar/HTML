@@ -17,3 +17,4 @@ btn.addEventListener("click", function (a) {
   let input = document.querySelector("input");
   input.focus();
 });
+

@@ -13,6 +13,11 @@ h1 {
     rgb(40, 62, 81)
   ) !important;
 }
+.btn{
+    color: black !important;
+    font-weight: 500 !important;
+    font-size: large;
+}
 
 #submit:hover {
   cursor: pointer;
