@@ -15,69 +15,106 @@
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body>
-    <div class="container d-flex flex-column">
-      <h3>Book a Session</h3>
-      <p>Fill in the form below to book a virtual session with your doctor</p>
-      <h3>Basic Information</h3>
-      <form action="" id="form">
-        <label for="Full Name" class="form-label">Full Name</label>
-        <textarea
-          name="Full Name"
-          id="fname"
-          class="form-control w-50"
-          rows="1"
-          style="resize: none"
-        ></textarea>
-        <label for="Email" class="form-label my-3">Email</label>
-        <textarea
-          name="Email"
-          id="email"
-          class="form-control w-50"
-          rows="1"
-          style="resize: none"
-        ></textarea>
-        <h5 class="my-3">Doctor</h5>
-        <select name="doctor" id="doctor  " class="form-select w-50">
-          <option value="" selected disabled>Select your Doctor</option>
-          <option value="JOHN_HOPKINS">Dr. John Hopkins</option>
-          <option value="MAYA_MARIN">Dr. Maya Marin</option>
-          <option value="DONNA_DOUGLAS">Dr. Donna Douglas</option>
-        </select>
-        <h5 class="my-3">Where?</h5>
-        <div class="form-check">
-          <input
-            type="radio"
-            value="GOOGLE_MEET"
-            name="location"
-            id="Google Meet"
-          />
-          <label for="Google Meet" class="form-label">Google Meet</label>
-        </div>
-        <div class="form-check">
-          <input type="radio" value="PHONE" name="location" id="Phone" />
-          <label for="Phone" class="form-label">Phone</label>
-        </div>
-        <h5 class="my-3">When?</h5>
-        <input type="datetime-local" class="w-50" name="" id="" />
-        <div class="w-40 my-3">
-          <button class="btn btn-primary">Submit</button>
-        </div>
-      </form>
-    </div>
-    <script>
-      let x = document.getElementById("form");
-      x.addEventListener("submit", (e) => {
-        e.preventDefault();
-        send();
-      });
-      function send() {
-        let name = document.getElementById("form");
-        
-        // let email=document.getElementById('email').value
-        console.dir(name);
-        console.log(name.elements["Email"].value);
+  <style>
+    @media screen and (max-width: 1199px) {
+      .fl {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
       }
-    </script>
+      .small {
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      .fl {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  </style>
+  <body>
+    <div id="mainContainer" class="container fl p-2">
+      <div style="height: calc(33%, -10px)">
+        <img
+          class="img-fluid"
+          src="https://cdn.fullestop.com/mobile-site/images/doctor-appointment.svg"
+          alt=""
+          style="object-fit: fill"
+        />
+      </div>
+      <div class="small">
+        <h3>Book a Session</h3>
+        <p>Fill in the form below to book a virtual session with your doctor</p>
+        <h3>Basic Information</h3>
+        <form action="" id="form">
+          <label for="Full Name" class="form-label">Full Name</label>
+          <textarea
+            name="Full Name"
+            id="fname"
+            class="form-control w-100"
+            rows="1"
+            style="resize: none"
+          ></textarea>
+          <p
+            id="fnamewarn"
+            style="
+              color: red;
+              visibility: hidden;
+              margin-bottom: -10px;
+              padding: 0;
+            "
+          >
+            hiii
+          </p>
+          <label for="Email" class="form-label my-3">Email</label>
+          <textarea
+            name="Email"
+            id="email"
+            class="form-control w-100"
+            rows="1"
+            style="resize: none"
+          ></textarea>
+          <p
+            id="emailwarn"
+            style="
+              color: red;
+              visibility: hidden;
+              margin-bottom: -10px;
+              padding: 0;
+            "
+          >
+            hii
+          </p>
+          <h5 class="my-3">Doctor</h5>
+          <select name="doctor" id="doctor" class="form-select w-100">
+            <option value="" selected disabled>Select your Doctor</option>
+            <option value="JOHN_HOPKINS">Dr. John Hopkins</option>
+            <option value="MAYA_MARIN">Dr. Maya Marin</option>
+            <option value="DONNA_DOUGLAS">Dr. Donna Douglas</option>
+          </select>
+          <h5 class="my-3">Where?</h5>
+          <div class="form-check">
+            <input
+              type="radio"
+              value="GOOGLE_MEET"
+              name="location"
+              id="Google Meet"
+            />
+            <label for="Google Meet" class="form-label">Google Meet</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" value="PHONE" name="location" id="Phone" />
+            <label for="Phone" class="form-label">Phone</label>
+          </div>
+          <h5 class="my-3">When?</h5>
+          <input type="datetime-local" class="w-100" name="" id="" />
+          <div class="w-40 my-3">
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
