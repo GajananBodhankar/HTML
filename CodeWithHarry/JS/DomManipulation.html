@@ -28,14 +28,25 @@
       <div class="box">5</div>
     </div>
     <script>
-        console.log(document.body.childNodes)
-        console.log(document.body.children[0].children)
-        // children gives only the elements i.e container => HTMLCollection(2) [div.container, script]
-        // childNodes gives output => NodeList(4) [text, div.container, text, script]
+      let _body = document.body;
+      console.log(_body.childNodes);
+      console.log(_body.children[0].children);
+      // children gives only the elements i.e container => HTMLCollection(2) [div.container, script]
+      // childNodes gives output => NodeList(4) [text, div.container, text, script]
 
-         console.log(document.body.firstChild)
-         console.log(document.body.firstElementChild)
-`
+      console.log(_body.firstChild);
+      console.log(_body.firstElementChild);
+      //  firstChild gives the firstChild of childNodes ie => #text
+      // firstElementChild gives the first actual element => <div class="container">....</div>
+
+      console.log(_body.children[0].firstElementChild.nextElementSibling);
+      console.log(_body.children[0].lastElementChild.previousElementSibling);
+
+      // all in all, if there is element in the property i.e nextElementSibling then it returns the actual element
+      // if not it returns the node which is created by browser not the client
+
+      console.log(_body.children[0].lastElementChild.parentElement)
+      console.log(_body.children[0].lastElementChild.parentNode)
     </script>
   </body>
 </html>
