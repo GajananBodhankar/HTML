@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      .conatiner {
+        padding: 1rem;
+        border: 1px solid black;
+        width: 50vw;
+        margin: auto;
+      }
+      .chidContainer {
+        padding: 1rem;
+        border: 1px solid red;
+      }
+      .child {
+        border: 1px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conatiner">
+      container
+      <div class="chidContainer">
+        ChildContainer
+        <div class="child">I am child One</div>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".conatiner").addEventListener("click", (e) => {
+        alert("Container");
+      });
+      document
+        .querySelector(".chidContainer")
+        .addEventListener("click", (e) => {
+          alert(" ChildContainer");
+        });
+      document.querySelector(".child").addEventListener("click", (e) => {
+        // To Stop Propagation towards it's parent, we use stopPropagation()
+        // e.stopPropagation()
+        alert("ContaiI am child Onener");
+      });
+    </script>
+  </body>
 </html>
