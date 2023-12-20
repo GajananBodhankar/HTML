@@ -28,7 +28,10 @@ async function LoadCarousel(id) {
 
   let data = await fetchData(id);
   let dataToBeAppended = appendData(data.items);
-  document.getElementById("carouselIndicators").append(dataToBeAppended);
+  let buttons = appendButtons(data.items);
+  document
+    .getElementById("carouselIndicators")
+    .append(dataToBeAppended, buttons);
 }
 
 async function fetchData(params) {
@@ -69,6 +72,22 @@ function appendData(data) {
   });
   console.log(innerClass);
   return innerClass;
+}
+
+function appendButtons(data) {
+  let div = document.createElement("div");
+  div.className = "carousel-indicators";
+  data.forEach((i, j) => {
+    if (i.enclosure.link) {
+      let Btn = document.createElement("button");
+      Btn.type = "button";
+      Btn.setAttribute("data-bs-target", "#carouselIndicators");
+      Btn.setAttribute("data-bs-slide-to", `${j}`);
+      Btn.className = j == 0 ? "active" : "";
+      div.append(Btn);
+    }
+  });
+  return div;
 }
 
 document.querySelector("#group").addEventListener("click", (e) => {
