@@ -1,70 +1,76 @@
-import teamsData from "./data.js";
-console.log(teamsData);
+async function LoadCarousel(id) {
+  let mainDiv = document.getElementById("car-content");
 
-const teamPillsContainerId = "teams-container";
-const teamContentContainerId = "team-content-container";
+  let carouselDiv = document.createElement("div");
+  carouselDiv.className = "carousel slide";
+  carouselDiv.id = "carouselIndicators";
+  carouselDiv.innerHTML = `
+  <div class="carousel-inner"></div>
+  <button
+    type="button"
+    class="carousel-control-prev"
+    data-bs-target="#carouselIndicators"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button
+    type="button"
+    class="carousel-control-next"
+    data-bs-target="#carouselIndicators"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon"></span>
+  </button>
+  `;
+  mainDiv.innerHTML = "";
+  mainDiv.append(carouselDiv);
 
-// TODO 1: Displaying team pills for each team
-function displayTeamPills(teamsData) {
-  let div = document.getElementById(teamPillsContainerId);
-  teamsData.forEach((i, j) => {
-    let item = document.createElement("div");
-    item.className = "card m-2 p-2";
-    item.id = i.id;
-    item.value = i.name;
-    item.textContent = i.name;
-    div.append(item);
-  });
+  let data = await fetchData(id);
+  let dataToBeAppended = appendData(data.items);
+  document.getElementById("carouselIndicators").append(dataToBeAppended);
 }
 
-displayTeamPills(teamsData);
+async function fetchData(params) {
+  var link = "";
+  if (params == "One") {
+    link =
+      "https://api.rss2json.com/v1/api.json?rss_url=https://flipboard.com/@dfletcher/india-tech-b2meqpd6z.rss";
+  } else if (params == "two") {
+    link =
+      "https://api.rss2json.com/v1/api.json?rss_url=https://flipboard.com/topic/indiansports.rss";
+  } else {
+    link =
+      "https://api.rss2json.com/v1/api.json?rss_url=https://flipboard.com/@thenewsdesk/the-latest-on-coronavirus-covid-19-t82no8kmz.rss";
+  }
+  let response = await fetch(link);
+  if (response) {
+    return response.json();
+  }
+  console.log(response.json(), params, link);
+  return null;
+}
 
-const teamPillsContainer = document.getElementById(teamPillsContainerId);
-
-// TODO 2: Event handler to show Carousel with images for selected team
-teamPillsContainer.addEventListener("click", (e) => {
-  //e.target -> element node where the "click" event is fired from
-  //events fired in child, bubbles up to the parent
-  let mainDiv = document.createElement("div");
-  mainDiv.className = "carousel slide";
-  mainDiv.id = "carouselExample";
-  mainDiv.style.height = "50vh";
-  mainDiv.style.width = "70vw";
-  let inner = document.createElement("div");
-  inner.className = "carousel-inner";
-  let list = teamsData.filter((i) => i.name == e.target.value);
-  console.log("list", list);
-  list[0].images.forEach((element, index) => {
-    let doc = document.createElement("div");
-    doc.className = `carousel-item ${index == 0 ? "active" : ""}`;
-    doc.style.height = "50vh";
-    doc.style.width = "70vw";
-    let img = document.createElement("img");
-    img.src = element;
-    img.class = "d-block w-100";
-    img.style.height = "100%";
-    img.style.width = "100%";
-    doc.append(img);
-    inner.appendChild(doc);
+function appendData(data) {
+  let innerClass = document.querySelector(".carousel-inner");
+  innerClass.innerHTML = "";
+  data.forEach((i, j) => {
+    if (i.enclosure.link) {
+      let item = document.createElement("div");
+      item.className = j == 0 ? `carousel-item active` : `carousel-item`;
+      let img = document.createElement("img");
+      img.src = i.enclosure.link;
+      img.className = "d-block w-100";
+      img.style.objectFit = "fill";
+      img.style.height = "30rem";
+      item.append(img);
+      innerClass.appendChild(item);
+    }
   });
-  let prevBtn = document.createElement("button");
-  prevBtn.className = "carousel-control-prev";
-  prevBtn.setAttribute("data-bs-target", "#carouselExample");
-  prevBtn.setAttribute("data-bs-slide", "prev");
-  let prevIcon = document.createElement("span");
-  prevIcon.className = "carousel-control-prev-icon";
-  prevBtn.append(prevIcon);
+  console.log(innerClass);
+  return innerClass;
+}
 
-  let nextBtn = document.createElement("button");
-  nextBtn.className = "carousel-control-next";
-  nextBtn.setAttribute("data-bs-target", "#carouselExample");
-  nextBtn.setAttribute("data-bs-slide", "next");
-  let nextIcon = document.createElement("span");
-  nextIcon.className = "carousel-control-next-icon";
-  nextBtn.append(nextIcon);
-
-  mainDiv.append(inner, prevBtn, nextBtn);
-  document.getElementById(teamContentContainerId).innerHTML = "";
-  document.getElementById(teamContentContainerId).append(mainDiv);
-  console.log(e.target);
+document.querySelector("#group").addEventListener("click", (e) => {
+  LoadCarousel(e.target.id);
 });

@@ -1,0 +1,7 @@
+.btngroup {
+  display: flex;
+  justify-content: space-around;
+}
+#car-content {
+  padding: 10rem 3rem;
+}
