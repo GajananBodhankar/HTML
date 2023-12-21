@@ -93,3 +93,4 @@ function appendButtons(data) {
 document.querySelector("#group").addEventListener("click", (e) => {
   LoadCarousel(e.target.id);
 });
+
