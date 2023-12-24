@@ -12,6 +12,7 @@ let rabbit = {
 
 rabbit.__proto__ = animal;
 
+// **********************************************************
 class A {
   constructor(name) {
     this.name = name;
@@ -32,3 +33,23 @@ class B extends A {
 let i = new B("hello");
 console.log(i.name);
 i.disp();
+
+// ************************************************************
+// Getters and setters
+
+class Main {
+  constructor(name) {
+    this.name = name;
+  }
+  get disp() {
+    return this._name;
+  }
+  set disp(name) {
+    this._name = name;
+  }
+}
+
+var n = new Main("Rohit");
+console.log(n.name);
+n.name = "Gajanan";
+console.log(n.name);
