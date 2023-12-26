@@ -18,3 +18,22 @@ let { name, age } = {
 
 let obj = Object.assign({ address: "Hyd" }, { name });
 console.log(obj);
+
+let arr = [10, 20, 30, 40, 50];
+
+console.log(
+  arr.reduce(
+    (data, i, j) => {
+      if (i % 2 == 0) {
+        data.sum += i;
+        data.count++;
+      }
+      return data;
+    },
+    { sum: 0, count: 0 }
+  )
+);
+
+console.log(Object.keys(arr));
+
+
