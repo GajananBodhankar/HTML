@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="height: 200vh; width: 100vw"></div>
+    <script>
+      window.addEventListener("scroll", () => {
+        if (
+          Math.round(window.scrollY) >=
+          Math.round(window.innerHeight * (5 / 100))
+        ) {
+          document.querySelector("div").style.backgroundColor = "red";
+        } else {
+          document.querySelector("div").style.backgroundColor = "white";
+        }
+      });
+    </script>
+  </body>
+</html>
