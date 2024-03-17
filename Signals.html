@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 500px;
+        width: 200px;
+        margin: auto;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+      }
+      .red {
+        border: 2px solid red;
+        height: 100px;
+        width: 100px;
+        border-radius: 150px;
+        background-color: red;
+        margin: auto;
+      }
+      .yellow {
+        border: 2px solid yellow;
+        height: 100px;
+        width: 100px;
+        border-radius: 150px;
+        background-color: yellow;
+        margin: auto;
+      }
+      .green {
+        border: 2px solid green;
+        height: 100px;
+        width: 100px;
+        border-radius: 150px;
+        background-color: green;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="red" style="visibility: visible"></div>
+      <div class="yellow" style="visibility: hidden"></div>
+      <div class="green" style="visibility: hidden"></div>
+    </div>
+  </body>
+  <script>
+    let red = document.querySelector(".red");
+    let yellow = document.querySelector(".yellow");
+    let green = document.querySelector(".green");
+    setInterval(() => {
+      if (red.style.visibility == "visible") {
+        red.style.visibility = "hidden";
+        yellow.style.visibility = "visible";
+        setTimeout(() => {
+          yellow.style.visibility = "hidden";
+          green.style.visibility = "visible";
+        }, 2000);
+      } else {
+        green.style.visibility = "hidden";
+        red.style.visibility = "visible";
+      }
+    }, 20000);
+  </script>
+</html>
